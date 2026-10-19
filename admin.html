@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Aeris Club Oran 1 • Free Mind, High Ambition</title>
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fas fa-feather-alt"></i>
+        <span>AERIS CLUB</span>
+        <small>Oran 1</small>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#form-section">Form</a></li>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm" id="scrollToForm">
+          <i class="fas fa-plus-circle"></i> Join Now
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i>
+        <span>Faculty of Medicine • First Sports & Cultural Club</span>
+      </div>
+      
+      <h1 class="hero-title">
+        <span class="text-gradient">Aeris Club</span><br>
+        <span class="text-white">Oran 1</span>
+      </h1>
+      
+      <p class="hero-subtitle">
+        Smart event planning that respects your exam schedule.
+        We gather your availability to choose the perfect moments for our activities.
+      </p>
+      
+      <p class="hero-tagline">
+        <i class="fas fa-quote-left"></i>
+        Free Mind, High Ambition
+        <i class="fas fa-quote-right"></i>
+      </p>
+      
+      <div class="hero-actions">
+        <button class="btn btn-primary btn-lg pulse" id="heroCtaBtn">
+          <i class="fas fa-calendar-check"></i> Share Your Availability
+        </button>
+        <button class="btn btn-outline btn-lg" id="exploreBtn">
+          <i class="fas fa-chart-line"></i> Explore Dashboard
+        </button>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="248">0</span>
+          <span class="stat-label">Active Members</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="6">0</span>
+          <span class="stat-label">Specialties</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number counter" data-target="12">0</span>
+          <span class="stat-label">Events Planned</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">About Us</span>
+        <h2>Who We Are</h2>
+        <p>The first sports and cultural club at the Faculty of Medicine Oran 1, dedicated to balancing academic excellence with extracurricular fulfillment.</p>
+      </div>
+      
+      <div class="about-grid">
+        <div class="about-card glass-card">
+          <div class="about-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Intelligent Planning</h3>
+          <p>We analyze exam schedules and availability to pick dates where maximum members can participate.</p>
+        </div>
+        
+        <div class="about-card glass-card">
+          <div class="about-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Inclusive Community</h3>
+          <p>Medicine, Pharmacy, Dentistry, Biology, Computer Science – all specialties welcome under one roof.</p>
+        </div>
+        
+        <div class="about-card glass-card">
+          <div class="about-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Excellence Driven</h3>
+          <p>Sports tournaments, cultural workshops, volunteering – we foster leadership and teamwork.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SMART AVAILABILITY FORM ========== -->
+  <section class="form-section" id="form-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Availability Form</span>
+        <h2>Smart Registration</h2>
+        <p>Fill in your details and exam periods. We'll use this data to plan events that fit everyone.</p>
+      </div>
+      
+      <div class="form-wrapper glass-card">
+        <form id="availabilityForm" class="availability-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">
+                <i class="fas fa-user"></i> Full Name *
+              </label>
+              <input type="text" id="fullName" name="fullName" placeholder="e.g., Ahmed Benali" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="specialty">
+                <i class="fas fa-graduation-cap"></i> Department / Specialty *
+              </label>
+              <select id="specialty" name="specialty" required>
+                <option value="">Select your specialty</option>
+                <option value="Medicine">Medicine</option>
+                <option value="Pharmacy">Pharmacy</option>
+                <option value="Dentistry">Dentistry</option>
+                <option value="Biology">Biology</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="academicYear">
+                <i class="fas fa-calendar-alt"></i> Academic Year *
+              </label>
+              <select id="academicYear" name="academicYear" required>
+                <option value="">Select year</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+                <option value="5th Year">5th Year</option>
+                <option value="6th Year">6th Year</option>
+                <option value="7th Year">7th Year</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="role">
+                <i class="fas fa-id-badge"></i> Role in Club *
+              </label>
+              <select id="role" name="role" required>
+                <option value="">Select role</option>
+                <option value="Member">Member</option>
+                <option value="Organizer">Organizer</option>
+                <option value="Tutor">Tutor</option>
+                <option value="Leader">Leader</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="examDates">
+              <i class="fas fa-file-alt"></i> Exam Dates / Periods *
+            </label>
+            <input type="text" id="examDates" name="examDates" placeholder="e.g., Jan 15-30, 2026 or March 10-25" required>
+            <small>List your upcoming exam periods clearly.</small>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="availableDays">
+                <i class="fas fa-calendar-week"></i> Available Days *
+              </label>
+              <div class="checkbox-group" id="availableDaysGroup">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="availableDays" value="Monday"> Monday
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="availableDays" value="Tuesday"> Tuesday
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="availableDays" value="Wednesday"> Wednesday
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="availableDays" value="Thursday"> Thursday
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="availableDays" value="Friday"> Friday
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="availableDays" value="Saturday"> Saturday
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="availableDays" value="Sunday"> Sunday
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="preferredTime">
+                <i class="fas fa-clock"></i> Preferred Activity Time *
+              </label>
+              <select id="preferredTime" name="preferredTime" required>
+                <option value="">Select time</option>
+                <option value="Morning (8-12)">Morning (8:00 - 12:00)</option>
+                <option value="Afternoon (13-17)">Afternoon (13:00 - 17:00)</option>
+                <option value="Evening (17-21)">Evening (17:00 - 21:00)</option>
+                <option value="Flexible">Flexible</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="volunteering">
+              <i class="fas fa-hand-holding-heart"></i> Available for Volunteering in Events? *
+            </label>
+            <select id="volunteering" name="volunteering" required>
+              <option value="">Select option</option>
+              <option value="Yes">Yes, I'm eager to help!</option>
+              <option value="Maybe">Maybe, depending on schedule</option>
+              <option value="No">Not at the moment</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-block" id="submitFormBtn">
+            <i class="fas fa-paper-plane"></i> Submit & Help Plan Events
+          </button>
+          
+          <div class="form-feedback" id="formFeedback"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LIVE STATISTICS DASHBOARD ========== -->
+  <section class="dashboard" id="dashboard">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Live Analytics</span>
+        <h2>Statistics Dashboard</h2>
+        <p>Real-time insights based on member submissions.</p>
+      </div>
+      
+      <div class="dashboard-grid">
+        <!-- Stats Cards -->
+        <div class="stat-cards-row">
+          <div class="stat-card glass-card">
+            <i class="fas fa-user-graduate"></i>
+            <div class="stat-info">
+              <span class="stat-value" id="totalMembers">0</span>
+              <span class="stat-desc">Total Members</span>
+            </div>
+          </div>
+          
+          <div class="stat-card glass-card">
+            <i class="fas fa-layer-group"></i>
+            <div class="stat-info">
+              <span class="stat-value" id="specialtyCount">0</span>
+              <span class="stat-desc">Specialties</span>
+            </div>
+          </div>
+          
+          <div class="stat-card glass-card">
+            <i class="fas fa-calendar-check"></i>
+            <div class="stat-info">
+              <span class="stat-value" id="avgAvailability">0%</span>
+              <span class="stat-desc">Avg Availability</span>
+            </div>
+          </div>
+          
+          <div class="stat-card glass-card">
+            <i class="fas fa-users-cog"></i>
+            <div class="stat-info">
+              <span class="stat-value" id="activeOrganizers">0</span>
+              <span class="stat-desc">Active Organizers</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Charts Row -->
+        <div class="charts-row">
+          <div class="chart-card glass-card">
+            <h3><i class="fas fa-chart-pie"></i> Students by Specialty</h3>
+            <canvas id="specialtyChart" height="250"></canvas>
+          </div>
+          
+          <div class="chart-card glass-card">
+            <h3><i class="fas fa-chart-bar"></i> Availability by Week</h3>
+            <canvas id="availabilityChart" height="250"></canvas>
+          </div>
+        </div>
+        
+        <!-- Heatmap & Best Dates -->
+        <div class="charts-row">
+          <div class="chart-card glass-card">
+            <h3><i class="fas fa-fire"></i> Exam Periods Heatmap</h3>
+            <div id="heatmapContainer" class="heatmap-container">
+              <p class="placeholder-text">Submit exam dates to see heatmap</p>
+            </div>
+          </div>
+          
+          <div class="chart-card glass-card">
+            <h3><i class="fas fa-star"></i> Best Dates for Club Events</h3>
+            <div id="bestDatesContainer" class="best-dates-list">
+              <p class="placeholder-text">Analyzing availability data...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION (Social Media Only) ========== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Get In Touch</span>
+        <h2>Follow Aeris Club</h2>
+        <p>Stay connected with us on social media for the latest updates and events.</p>
+      </div>
+      
+      <div class="social-media-grid">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/aeris_club/" target="_blank" rel="noopener noreferrer" class="social-card glass-card instagram-card">
+          <div class="social-icon-wrapper">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="social-info">
+            <h3>Instagram</h3>
+            <span>@aeris_club</span>
+            <small>Follow our stories & posts</small>
+          </div>
+          <i class="fas fa-arrow-right social-arrow"></i>
+        </a>
+        
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@aeris_club" target="_blank" rel="noopener noreferrer" class="social-card glass-card tiktok-card">
+          <div class="social-icon-wrapper">
+            <i class="fab fa-tiktok"></i>
+          </div>
+          <div class="social-info">
+            <h3>TikTok</h3>
+            <span>@aeris_club</span>
+            <small>Watch our latest videos</small>
+          </div>
+          <i class="fas fa-arrow-right social-arrow"></i>
+        </a>
+        
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/aerisclub" target="_blank" rel="noopener noreferrer" class="social-card glass-card facebook-card">
+          <div class="social-icon-wrapper">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="social-info">
+            <h3>Facebook</h3>
+            <span>Aeris Club Oran 1</span>
+            <small>Join our community</small>
+          </div>
+          <i class="fas fa-arrow-right social-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <i class="fas fa-feather-alt"></i>
+          <span>AERIS CLUB ORAN 1</span>
+          <p>"Free Mind, High Ambition."</p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#form-section">Form</a>
+          <a href="#dashboard">Dashboard</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/aeris_club/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@aeris_club" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://www.facebook.com/aerisclub" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Aeris Club Oran 1 – Faculty of Medicine. All rights reserved.</p>
+        <p class="developer-credit">
+          Developed by 
+          <a href="https://salahdevdz.great-site.net/" target="_blank" rel="noopener noreferrer" class="dev-link">
+            <i class="fas fa-code"></i> SalahDevDZ
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
